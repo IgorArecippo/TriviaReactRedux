@@ -94,8 +94,9 @@ class Questions extends Component {
         </div>
         <button
           type="button"
+          data-testid="btn-next"
           onClick={ this.handleClick }
-          disabled={ isDisabled }
+          // disabled={ isDisabled }
         >
           NEXT
         </button>
