@@ -12,6 +12,7 @@ class Feedback extends Component {
 
   render() {
     const { assertions, score } = this.props;
+    console.log(typeof score);
     return (
       <div>
         <Header />
@@ -20,7 +21,7 @@ class Feedback extends Component {
           <p>Respostas corretas:</p>
           <p data-testid="feedback-total-question">{assertions}</p>
           <p>Placar final:</p>
-          <p data-testid="feedbacfeedback-total-score">{score}</p>
+          <p data-testid="feedback-total-score">{score}</p>
         </div>
       </div>
     );
