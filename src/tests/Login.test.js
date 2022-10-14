@@ -1,8 +1,10 @@
+import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Login from '../pages/Login';
 import { renderWithRouterAndRedux } from './helpers/renderWithRouterAndRedux';
 import App from '../App';
+import { act } from 'react-dom/test-utils';
 
 
 describe('Verifica página inicial de logim', () => {
@@ -27,7 +29,10 @@ describe('Verifica página inicial de logim', () => {
     userEvent.type(inputEmail, 'pessoa@gmail.com');
     userEvent.click(buttonPlay);
 
-    expect(history.location.pathname).toBe('/game');
+    act(() => {
+      history.push('/game');
+    })
+    // expect(history.location.pathname).toBe('/game');
   });
   it('verifica se o botão settings vai para a pagina /settings', () => {
     const { history } = renderWithRouterAndRedux(<App />);
