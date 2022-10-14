@@ -16,7 +16,6 @@ class Header extends Component {
 
     return (
       <header>
-        <h1>teste</h1>
         <h1 data-testid="header-player-name">{ name }</h1>
         <h2 data-testid="header-score">{ score }</h2>
         <img

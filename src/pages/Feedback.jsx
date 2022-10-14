@@ -34,7 +34,7 @@ class Feedback extends Component {
             onClick={ () => history.push('/ranking') }
             data-testid="btn-ranking"
           >
-            Login
+            Ranking
           </button>
         </div>
       </div>
